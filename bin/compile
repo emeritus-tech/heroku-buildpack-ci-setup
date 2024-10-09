@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-CI_ENABLED_BRANCHES_ARR=(${CI_ENABLED_BRANCHES//;/ })
+echo "Checking if the CI is enabled for branch" $CI_ENABLED_BRANCHES
+echo "List of enabled branches: " $HEROKU_TEST_RUN_BRANCH
+
 if [[ $CI_ENABLED_BRANCHES != *$HEROKU_TEST_RUN_BRANCH* ]]; then
   echo "The CI for the branch" $HEROKU_TEST_RUN_BRANCH "is disabled"
   echo "If you want to run CI for this branch please include it in the CI_ENABLED_BRANCHES environment variable"
