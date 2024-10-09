@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Running heroku-buildpack-ci-setup..."
+exit 0
