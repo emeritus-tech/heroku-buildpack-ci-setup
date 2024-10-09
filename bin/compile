@@ -3,8 +3,11 @@
 function export_env_dir() {
   echo "Loading environment variables..."
   env_dir=$1
+  echo $env_dir
   acceptlist_regex=${2:-''}
+  echo $acceptlist_regex
   denylist_regex=${3:-'^(PATH|GIT_DIR|CPATH|CPPATH|LD_PRELOAD|LIBRARY_PATH)$'}
+  echo $denylist_regex
   if [ -d "$env_dir" ]; then
     for e in $(ls $env_dir); do
       echo "$e" | grep -E "$acceptlist_regex" | grep -qvE "$denylist_regex" &&
