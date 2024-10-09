@@ -4,5 +4,5 @@ CI_ENABLED_BRANCHES_ARR=(${CI_ENABLED_BRANCHES//;/ })
 if [[ $CI_ENABLED_BRANCHES != *$HEROKU_TEST_RUN_BRANCH* ]]; then
   echo "The CI for the branch" $HEROKU_TEST_RUN_BRANCH "is disabled"
   echo "If you want to run CI for this branch please include it in the CI_ENABLED_BRANCHES environment variable"
-  exit 0
+  exit 1
 fi
