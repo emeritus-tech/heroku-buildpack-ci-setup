@@ -19,6 +19,7 @@ function export_env_dir() {
 
 export_env_dir
 
+echo "***** Test Cris******"
 echo "Checking if the CI is enabled for branch" $CI_ENABLED_BRANCHES
 echo "List of enabled branches: " $HEROKU_TEST_RUN_BRANCH
 
