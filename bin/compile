@@ -20,7 +20,12 @@ function export_env_dir() {
 export_env_dir
 
 echo "***** Test ENVS******"
-env
+curl https://dev-dashboar-add-an-end-wzfget.herokuapp.com/api/v1/ci/review_app_configuration > /tmp/review_apps_to_test.txt
+
+if grep -q "enrollment-engine-pr-12190" /tmp/review_apps_to_test.txt; then
+  echo "****** Exiting... ******"
+  exit 1
+fi
 echo "***** Test ENVS******"
 echo "Checking if the CI is enabled for branch" $CI_ENABLED_BRANCHES
 echo "List of enabled branches: " $HEROKU_TEST_RUN_BRANCH
@@ -30,3 +35,4 @@ if [[ $CI_ENABLED_BRANCHES != *$HEROKU_TEST_RUN_BRANCH* ]]; then
   echo "If you want to run CI for this branch please include it in the CI_ENABLED_BRANCHES environment variable"
   exit 1
 fi
+
