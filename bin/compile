@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function export_env_dir() {
   echo "Loading environment variables..."
@@ -19,9 +19,13 @@ function export_env_dir() {
 
 export_env_dir
 
-echo "***** Test ENVS******"
+echo "***** Test ENVS 1******"
 curl https://dev-dashboar-add-an-end-wzfget.herokuapp.com/api/v1/ci/review_app_configuration > /tmp/review_apps_to_test.txt
 
+
+echo printenv
+echo "***** Test ENVS 2******"
+echo env
 
 if ! grep -q "enrollment-engine-pr-12190" /tmp/review_apps_to_test.txt; then
   echo "****** Exiting... ******"
