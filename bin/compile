@@ -25,7 +25,10 @@ curl https://dev-dashboar-add-an-end-wzfget.herokuapp.com/api/v1/ci/review_app_c
 
 printenv
 
-cd /app/ && git rev-parse --abbrev-ref HEAD
+# cd /app/ && git rev-parse --abbrev-ref HEAD
+
+echo "**** Home ****"
+ls -la $HOME
 
 echo "***** Test ENVS 2******"
 env
