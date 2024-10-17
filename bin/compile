@@ -30,6 +30,9 @@ printenv
 echo "**** Home ****"
 ls -la $HOME
 
+echo "**** .indyno ****"
+cat .indyno
+
 echo "***** Test ENVS 2******"
 env
 
