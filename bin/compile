@@ -28,7 +28,9 @@ printenv
 # cd /app/ && git rev-parse --abbrev-ref HEAD
 
 echo "**** Home ****"
-ls -la $HOME
+cd $HOME
+ls -la
+
 
 echo "**** .indyno ****"
 cat .indyno
