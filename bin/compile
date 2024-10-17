@@ -33,7 +33,7 @@ ls -la
 
 
 echo "**** .indyno ****"
-cat .indyno
+ls -lah .indyno
 
 echo "***** Test ENVS 2******"
 env
