@@ -37,7 +37,7 @@ echo "***** Test ENVS******"
 echo "Checking if the CI is enabled for branch" $CI_ENABLED_BRANCHES
 echo "List of enabled branches: " $HEROKU_TEST_RUN_BRANCH
 echo "List of enabled branches2: " ${HEROKU_TEST_RUN_BRANCH}
-echo "List of enabled branches3: " $HEROKU_TEST_RUN_BRANCH
+echo "List of enabled branches3: " $CI_ENABLE_BRANCHES_TEST
 
 if [[ $CI_ENABLED_BRANCHES != *$HEROKU_TEST_RUN_BRANCH* ]]; then
   echo "The CI for the branch" $HEROKU_TEST_RUN_BRANCH "is disabled"
