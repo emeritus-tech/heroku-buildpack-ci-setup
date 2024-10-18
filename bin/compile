@@ -19,7 +19,7 @@ function export_env_dir() {
 
 export_env_dir
 
-curl https://dev-dashboar-add-an-end-wzfget.herokuapp.com/api/v1/ci/review_app_configuration > /tmp/review_apps_branches_to_test.txt
+curl https://dev-dashboar-add-an-end-j4ydjy.herokuapp.com/api/v1/ci/review_app_configuration > /tmp/review_apps_branches_to_test.txt
 
 
 echo "Checking if the CI is enabled for branch" $CI_ENABLED_BRANCHES
