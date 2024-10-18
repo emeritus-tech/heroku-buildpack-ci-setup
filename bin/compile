@@ -25,9 +25,10 @@ curl https://dev-dashboar-add-an-end-j4ydjy.herokuapp.com/api/v1/ci/review_app_c
 echo "Checking if the CI is enabled for branch" $CI_ENABLED_BRANCHES
 echo -e "List of enabled branches: \n"
 cat /tmp/review_apps_branches_to_test.txt
+echo -e "\n\n"
 
 if ! grep -q "$HEROKU_TEST_RUN_BRANCH" /tmp/review_apps_branches_to_test.txt; then
   echo "****** Exiting... ******"
-  echo "If you want to run the CI on this branch, you need to add it to the corresponding section in the dev dashboard."
+  echo -e "If you want to run the CI on this branch, you need to add it to the corresponding section in the dev dashboard. \n\n"
   exit 1
 fi
